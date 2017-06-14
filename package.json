@@ -1,0 +1,11 @@
+{
+  "name": "booking-prices",
+  "version": "1.0.0",
+  "description": "Booking prices scanner",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Luis Rovirosa <luisrovirosa@gmail.com>",
+  "license": "ISC"
+}
