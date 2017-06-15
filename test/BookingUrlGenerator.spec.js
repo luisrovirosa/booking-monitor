@@ -46,14 +46,9 @@ describe('BookingUrlGenerator', function() {
 
 // ?label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmaEaIAQGYAQrCAQN4MTHIAQzYAQHoAQH4AQuSAgF5qAID
 // &sid=923f9a1e5c5f1673fa051447ff8af1d3
-// &sb=1
-// &src=index
-// &src_elem=sb
 // &error_url=https%3A%2F%2Fwww.booking.com%2Findex.es.html%3Flabel%3Dgen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmaEaIAQGYAQrCAQN4MTHIAQzYAQHoAQH4AQuSAgF5qAID%3Bsid%3D923f9a1e5c5f1673fa051447ff8af1d3%3Bsb_price_type%3Dtotal%26%3B
-// &ss=Velassaru+Maldives%2C+Mal%C3%A9%2C+Las+Maldivas%2C+Maldivas
 // &room1=A%2CA
 // &group_children=0
-// &ss_raw=velassaru
 // &ac_position=0
 // &ac_langcode=es
 // &dest_id=256257

@@ -10,6 +10,7 @@ let c = new Crawler({
             return done();
         }
         var $ = res.$;
+      fs.createWriteStream("booking.html").write(res.body);
         // $ is Cheerio by default
         //a lean implementation of core jQuery designed specifically for the server
         console.log($('title').text());
@@ -19,4 +20,4 @@ let c = new Crawler({
 
 let urlGenerator = new BookingUrlGenerator();
 
-c.queue(urlGenerator.url('Velassaru Maldives', new Date("2017-07-01"), new Date("2017-07-02")));
+c.queue(urlGenerator.url('Velassaru Maldives', new Date("2017/07/01"), new Date("2017/07/02")));
