@@ -4,11 +4,15 @@
   "description": "Booking prices scanner",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha"
   },
   "author": "Luis Rovirosa <luisrovirosa@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "crawler": "^1.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
   }
 }

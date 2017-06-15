@@ -1,6 +1,8 @@
-var Crawler = require('crawler');
+let Crawler = require('crawler');
+let fs = require('fs');
+let BookingUrlGenerator = require('./BookingUrlGenerator');
 
-var c = new Crawler({
+let c = new Crawler({
     maxConnections: 1,
     callback: function(error, res, done) {
         if (error) {
@@ -15,4 +17,6 @@ var c = new Crawler({
     }
 });
 
-c.queue('http://www.amazon.com');
+let urlGenerator = new BookingUrlGenerator();
+
+c.queue(urlGenerator.url('Velassaru Maldives', new Date("2017-07-01"), new Date("2017-07-02")));
