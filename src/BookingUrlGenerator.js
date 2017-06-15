@@ -7,7 +7,9 @@ module.exports = class BookingUrlGenerator {
         '&checkin_monthday=' + padToTwo(checkInDate.getDate()) +
         '&checkout_year=' + checkOutDate.getFullYear() +
         '&checkout_month=' + padToTwo(checkOutDate.getMonth() + 1) +
-        '&checkout_monthday=' + padToTwo(checkOutDate.getDate());
+        '&checkout_monthday=' + padToTwo(checkOutDate.getDate()) +
+        '&no_rooms=1' +
+        '';
   }
 };
 
