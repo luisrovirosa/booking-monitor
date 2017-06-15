@@ -3,14 +3,20 @@ let BookingUrlGenerator = require('../src/BookingUrlGenerator');
 let expect = require('chai').expect;
 
 describe('BookingUrlGenerator', function() {
-    let urlGenerator;
-    beforeEach(() => {
-        urlGenerator = new BookingUrlGenerator();
-    });
-    it('returns an address from booking', function() {
-      let url = urlGenerator.url('Velassaru Maldives', new Date(), new Date());
-      expect(url).to.include("https://www.booking.com/searchresults.es.html");
-    });
+  let urlGenerator;
+  beforeEach(() => {
+    urlGenerator = new BookingUrlGenerator();
+  });
+
+  it('returns an address from booking', function() {
+    let url = urlGenerator.url('Velassaru Maldives', new Date(), new Date());
+    expect(url).to.include('https://www.booking.com/searchresults.es.html');
+  });
+
+  it('includes the search text', function() {
+    let url = urlGenerator.url('Velassaru Maldives', new Date(), new Date());
+    expect(url).to.include('&ss=Velassaru Maldives');
+  });
 });
 
 // https://www.booking.com/searchresults.es.html
