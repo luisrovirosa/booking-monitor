@@ -8,7 +8,7 @@ describe('BookingUrlGenerator', function() {
     urlGenerator = new BookingUrlGenerator();
   });
 
-  it('returns an address from booking', function() {
+  it('the url is from booking', function() {
     let url = urlGenerator.url('Velassaru Maldives', new Date(), new Date());
     expect(url).to.include('https://www.booking.com/searchresults.es.html');
   });
@@ -16,6 +16,7 @@ describe('BookingUrlGenerator', function() {
   it('includes the search text', function() {
     let url = urlGenerator.url('Velassaru Maldives', new Date(), new Date());
     expect(url).to.include('&ss=Velassaru Maldives');
+    expect(url).to.include('&ss_raw=Velassaru Maldives');
   });
 
   it('includes the checkin date', function() {

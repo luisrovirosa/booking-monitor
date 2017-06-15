@@ -2,6 +2,7 @@ module.exports = class BookingUrlGenerator {
   url(textToSearch, checkInDate, checkOutDate) {
     return 'https://www.booking.com/searchresults.es.html' +
         '&ss=' + textToSearch +
+        '&ss_raw=' + textToSearch +
         '&checkin_year=' + checkInDate.getFullYear() +
         '&checkin_month=' + padToTwo(checkInDate.getMonth() + 1) +
         '&checkin_monthday=' + padToTwo(checkInDate.getDate()) +
