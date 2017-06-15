@@ -17,6 +17,14 @@ describe('BookingUrlGenerator', function() {
     let url = urlGenerator.url('Velassaru Maldives', new Date(), new Date());
     expect(url).to.include('&ss=Velassaru Maldives');
   });
+
+  it('includes the checkin date', function() {
+    let url = urlGenerator.url('Velassaru Maldives', new Date('2017/02/06'),
+        new Date());
+    expect(url).to.include('&checkin_year=2017');
+    expect(url).to.include('&checkin_month=02');
+    expect(url).to.include('&checkin_monthday=06');
+  });
 });
 
 // https://www.booking.com/searchresults.es.html
